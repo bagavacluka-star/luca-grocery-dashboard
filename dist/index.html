@@ -193,7 +193,6 @@
     </div>
   </main>
   <footer class="shell"><span>Informativni pregled javno objavljenih cena. Nije ponuda trgovaca.</span><span id="footerDate"></span></footer>
-  <script src="./data.js"></script>
   <script>
     const $ = id => document.getElementById(id);
     const storeOrder = ['lidl','metro','maxi'];
@@ -283,15 +282,17 @@
       const blob=new Blob([JSON.stringify(DATA,null,2)],{type:'application/json'}),u=URL.createObjectURL(blob),a=document.createElement('a');
       a.href=u;a.download=`cene-namirnica-${DATA.generated_at.slice(0,10)}.json`;a.click();URL.revokeObjectURL(u);
     });
-    try {
-      if(!window.GROCERY_DATA) throw new Error('Podaci trenutno nisu dostupni.');
-      DATA=window.GROCERY_DATA;
+    fetch('./data.json?v='+Date.now(),{cache:'no-store'}).then(response=>{
+      if(!response.ok) throw new Error('Podaci trenutno nisu dostupni.');
+      return response.json();
+    }).then(data=>{
+      DATA=data;
       $('itemSelect').innerHTML=DATA.items.map(x=>`<option value="${esc(x.id)}">${esc(x.name)}</option>`).join('');
       renderSummary();renderMatrix();selectItem(selected);
       $('loading').hidden=true;$('app').hidden=false;
-    } catch(err) {
+    }).catch(err=>{
       $('loading').hidden=true;$('error').textContent=`Ne mogu da prikažem proverene cene: ${err.message}`;$('error').hidden=false;
-    }
+    });
   </script>
 </body>
 </html>

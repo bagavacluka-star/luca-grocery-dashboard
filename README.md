@@ -1,6 +1,6 @@
 # Cene namirnica: Lidl, Metro Zemun, Maxi Online
 
-Hosted dashboard for five staple groceries. The page is static and reads bundled `dist/data.js`, with `dist/data.json` for download and inspection. It is designed to be shareable, with source links, retailer-hosted product photos, and explicit labels for different packs or specifications.
+Hosted dashboard for five staple groceries. The page is static and requests the latest `dist/data.json` when opened; `dist/data.js` contains the same data for inspection. It is designed to be shareable, with source links, retailer-hosted product photos, and explicit labels for different packs or specifications.
 
 ## Refresh
 
