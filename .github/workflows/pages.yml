@@ -12,6 +12,10 @@ on:
         description: Check retailer sources without changing the published site
         type: boolean
         default: false
+      send_test_email:
+        description: Send one test email after refreshing prices
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -73,3 +77,28 @@ jobs:
         if: inputs.verify_only != true
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Send grocery email
+        if: (github.event_name == 'schedule' && vars.EMAIL_ENABLED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.send_test_email == true)
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_TEST: ${{ inputs.send_test_email }}
+        run: |
+          if [ "$MAIL_TEST" = "true" ]; then
+            python scripts/email_report.py --send --test
+          else
+            python scripts/email_report.py --send
+          fi
+
+      - name: Save email delivery marker
+        if: (github.event_name == 'schedule' && vars.EMAIL_ENABLED == 'true') || (github.event_name == 'workflow_dispatch' && inputs.send_test_email == true)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .mail-state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record grocery email delivery"
+            git push
+          fi
