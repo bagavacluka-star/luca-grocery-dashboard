@@ -1,0 +1,11 @@
+/.openai/
+/data/
+/__MACOSX/
+/00-POCNI-OVDE.md
+/01-NALEPI-U-CODEX.txt
+/02-KAKO-DA-ISPRICAS-PROJEKAT.md
+/03-EMAIL-OPCIONO.md
+/EMAIL-SABLON.md
+/.venv/
+__pycache__/
+*.pyc
