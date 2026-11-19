@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T09:13:34+01:00",
+  "generated_at": "2026-11-19T21:09:36+01:00",
   "timezone": "Europe/Belgrade",
   "currency": "RSD",
   "items": [
@@ -685,7 +685,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "eggs",
       "store": "lidl",
       "kind": "pack_alternative",
@@ -701,7 +701,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "eggs",
       "store": "maxi",
       "kind": "exact",
@@ -717,7 +717,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "eggs",
       "store": "metro",
       "kind": "exact",
@@ -733,7 +733,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "flour",
       "store": "lidl",
       "kind": "pack_alternative",
@@ -749,7 +749,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "flour",
       "store": "maxi",
       "kind": "exact",
@@ -765,7 +765,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "flour",
       "store": "metro",
       "kind": "exact",
@@ -781,7 +781,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "milk",
       "store": "lidl",
       "kind": "spec_alternative",
@@ -797,7 +797,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "milk",
       "store": "maxi",
       "kind": "exact",
@@ -813,7 +813,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "milk",
       "store": "metro",
       "kind": "exact",
@@ -829,7 +829,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "oil",
       "store": "lidl",
       "kind": "exact",
@@ -845,7 +845,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "oil",
       "store": "maxi",
       "kind": "exact",
@@ -861,7 +861,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "oil",
       "store": "metro",
       "kind": "exact",
@@ -877,7 +877,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "sugar",
       "store": "lidl",
       "kind": "exact",
@@ -893,7 +893,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "sugar",
       "store": "maxi",
       "kind": "exact",
@@ -909,7 +909,7 @@
     },
     {
       "date": "2026-11-19",
-      "checked_at": "2026-11-19T09:13:34+01:00",
+      "checked_at": "2026-11-19T21:09:36+01:00",
       "item": "sugar",
       "store": "metro",
       "kind": "exact",
