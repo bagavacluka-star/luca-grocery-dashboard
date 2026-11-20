@@ -14,7 +14,7 @@ The refresh fetches one fixed product per store and item from retailer-owned pub
 
 ## GitHub Pages
 
-The workflow in `.github/workflows/pages.yml` publishes `dist/` when code is pushed to `main`. It also runs each day at 08:00 `Europe/Belgrade`, refreshes prices, checks the data, commits the updated files to preserve history, and deploys them to the same Pages URL. A manual run is available under Actions. Configure the repository's Pages source as **GitHub Actions** before the first deployment. The scheduled run may start later than its specified time when GitHub Actions is busy.
+The workflow in `.github/workflows/pages.yml` publishes `dist/` when code is pushed to `main`. It also runs each day at 10:52 `Europe/Belgrade`, refreshes prices, checks the data, commits the updated files to preserve history, and deploys them to the same Pages URL. A manual run is available under Actions. Configure the repository's Pages source as **GitHub Actions** before the first deployment. The scheduled run may start later than its specified time when GitHub Actions is busy.
 
 Optional daily Gmail reports use the same scheduled workflow after deployment. Configure `GMAIL_USER`, `GMAIL_APP_PASSWORD`, and `MAIL_TO` as repository Actions secrets, send one approved test with the `send_test_email` manual input, and only then set the repository Actions variable `EMAIL_ENABLED` to `true`. The script records the date and a salted recipient hash after SMTP accepts a message, so ordinary reruns skip the same recipient and day. No address or credential is stored in source. SMTP and the Git commit cannot form a single transaction; if delivery succeeds but the state commit fails, review Gmail's Sent folder before rerunning.
 
