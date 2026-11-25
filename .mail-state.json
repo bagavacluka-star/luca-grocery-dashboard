@@ -29,6 +29,11 @@
       "date": "2026-11-24",
       "recipient_hash": "5c604d11c79057cf9a9dba1213e6f24ff8c4daa837fa70b31db899e86321af4f",
       "mode": "daily"
+    },
+    {
+      "date": "2026-11-26",
+      "recipient_hash": "5c604d11c79057cf9a9dba1213e6f24ff8c4daa837fa70b31db899e86321af4f",
+      "mode": "daily"
     }
   ]
 }
